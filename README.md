@@ -1,2 +1,2 @@
 # locust-test
-学习locust的测试文件001
+学习locust的测试文件002
