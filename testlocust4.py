@@ -1,29 +1,6 @@
-from locust import Locust, TaskSet, task
+import getpass
 
-class stay(TaskSet):
-    @task(3)
-    def readBook(self):
-        print ('I am reading a book.')
+username = input("username:")
+password = input("password:")
 
-    @task(6)
-    def listenMusic(self):
-        print ('I am listening to music.')
-
-class play(TaskSet):
-    @task(2)
-    def play(self):
-        print ('I am playing a game.')
-
-class UserTask(TaskSet):
-    tasks = {stay:1,play:2}
-
-    @task(2)
-    def leave(self):
-        print ('I don not like this page.')
-
-    @task(3)
-    def go(self):
-        print ('I just want to go.')
-
-class User(Locust):
-    task_set = UserTask
+print(username,password)
